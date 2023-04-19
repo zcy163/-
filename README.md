@@ -1,4 +1,4 @@
-# 赵晨阳的简历
+# 赵晨阳
 
 - Topic: docker python drf kubernetes 容器 运维开发 自动化 AI
 
