@@ -15,7 +15,7 @@
 
 ## 技能清单
 
-- 开发语言: shell,Python
+- 开发语言: Shell,Python
 - 版本管理: Git（github、gitee）
 - 数据库: MySQL,,Redis,Etcd
 - 方法论: Devops
