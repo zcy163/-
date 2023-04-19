@@ -33,12 +33,12 @@
 #### K8s 集群中增加prometheus监控ingress指标
 
 - 基于开源的prometheus监控nginx-ingress
-  - 测试环境搭建nginx-ingress，prometheus
-  - 调试ingress监控指标
-  - ingress的监控指标对接到prometheus的监控模板
-  - 完成测试，进行验证
-  - 编写对应的变更控制表
-  - 根据审批后的变更控制表在生成环境部署验证
+- 测试环境搭建nginx-ingress，prometheus
+- 调试ingress监控指标
+- ingress的监控指标对接到prometheus的监控模板
+- 完成测试，进行验证
+- 编写对应的变更控制表
+- 根据审批后的变更控制表在生成环境部署验证
 
 #### k8s 集群node节点扩容
 
