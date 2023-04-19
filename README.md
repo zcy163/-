@@ -17,7 +17,6 @@
 
 - 开发语言: shell,Python
 - 版本管理: Git（github、gitee）
-- CI/CD:  Jenkins
 - 数据库: MySQL,,Redis,Etcd
 - 方法论: Devops
 - Container Tech: Containerd, Docker
