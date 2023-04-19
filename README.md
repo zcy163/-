@@ -2,6 +2,7 @@
 
 - Topic: docker python drf kubernetes 容器 运维开发 自动化 AI
 
+
 ## 关于我
 
 - 赵晨阳
@@ -15,6 +16,7 @@
 - 证书：CKA
 - ![image](https://user-images.githubusercontent.com/86656798/232954190-0fd9ed1b-f789-468d-ae97-b3558be6050f.png)
 
+
 ## 技能清单
 
 - 开发语言: Shell,Python
@@ -25,8 +27,8 @@
 - Ops: LNMP, Linux, MySQL, Shell，Docker, Kubernetes，Ansible，Zookeeper，Hdfs，Kvm，Django Rest framework，Ingress，Prometheus,Etcd,Coredns
 - OS:  CoreOS, Ubuntu 
 
-## 项目经历
 
+## 项目经历
 
 #### K8s 集群中增加prometheus监控ingress指标
 
@@ -36,60 +38,41 @@
   - ingress的监控指标对接到prometheus的监控模板
   - 完成测试，进行验证
   - 编写对应的变更控制表
-  - 根据审批后的变更控制表在生成环境部署调试
-
-
-#### zookeeper 集群zxid溢出处理方案
-
-- CLI兼容[slurm](https://www.schedmd.com/) 降低了传统HPC生态用户迁移成本
-- 基于k8s调度任务,使用自定义scheduler
-- 兼容 `caffe2` `tensorflow` `pytorch` 常见框架 使用对应k8s的operator
-- 云上环境与云下环境混合部署，多集群调度
-- 云上环境自动扩缩容 aws 使用ASG
-- 集群自动部署（terraform+rke）
-- 支持以太网以及RDMA网络异构网络环境调度
-
+  - 根据审批后的变更控制表在生成环境部署验证
 
 #### k8s 集群node节点扩容
 
-类似于简化版的网易蜂巢，包含代码托管构建，镜像市场，弹性计算，云盘 等功能
-
-- 负责系统后端架构设计，技术选型。后端系统开发
-- 子系统：
-    - CI/CD 系统: 使用 `gogs` git服务 和 `drone` 自动构建系统 进行代码过托管和自动构建
-    - 私有docker registry: 使用 `Vmware Harbor` 高可用集群建设私有镜像托管系统
-    - CEPH 块存储以及对象存储系统: 为PaaS平台提供块存储实现云盘功能，对git系统提供共享存储，为registry 提供对象存储
-    - Kubernetes: 提供弹性计算和服务调度功能。
-    - `archon`实现kubernetes集群的管理。使用一个共享的管理集群来管理每个租户的业务集群。
-
+- 根据要求制定扩容变更控制表
+- 根据腾讯的TKE的K8S集群进行node节点扩容
+- 根据扩容要求，跟资产组调用机器资源
+- 机器初始化，分区，配置iptables，优化内核，ssh服务，调整默认字符，关闭swap
+- 测试环境进行扩容操作，验证
+- 审核变更控制表
+- 生成环境进行扩容操作，验证
 
 #### k8s AI私有化交付
 
-类似于简化版的网易蜂巢，包含代码托管构建，镜像市场，弹性计算，云盘 等功能
-
-- 负责系统后端架构设计，技术选型。后端系统开发
-- 子系统：
-    - CI/CD 系统: 使用 `gogs` git服务 和 `drone` 自动构建系统 进行代码过托管和自动构建
-    - 私有docker registry: 使用 `Vmware Harbor` 高可用集群建设私有镜像托管系统
-    - CEPH 块存储以及对象存储系统: 为PaaS平台提供块存储实现云盘功能，对git系统提供共享存储，为registry 提供对象存储
-    - Kubernetes: 提供弹性计算和服务调度功能。
-    - `archon`实现kubernetes集群的管理。使用一个共享的管理集群来管理每个租户的业务集群。
-
+- 负责k8s环境的搭建（二进制、kubeadm）
+- 负责在搭建好的环境上容器化部署私有化服务（人脸识别、文字识别、语音技术）
 
 #### python web游戏
 
-- 负责基于`zabbix`设计一个监控系统监控173所有服务器以及中间件，数据库的状态，以及报警
-- 基于`zabbix`定制了报警行为，报警模式。以`python`开发了一套`zabbix`的报警脚本库。使用`MySQL-TokuDB` 作为存储。由于当时zabbix当时不能处理大量数据，对监控系统依据业务进行拆分，然后封装一个统一接口对外提供服务
--项目地址：
+- 负责web游戏项目的后端接口开发（订单接口，用户管理接口，滚动消息接口）
+- 项目地址：https://github.com/zcy163/game
 
 #### python 微信电商小程序
 
-- 负责基于`zabbix`设计一个监控系统监控173所有服务器以及中间件，数据库的状态，以及报警
-- 基于`zabbix`定制了报警行为，报警模式。以`python`开发了一套`zabbix`的报警脚本库。使用`MySQL-TokuDB` 作为存储。由于当时zabbix当时不能处理大量数据，对监控系统依据业务进行拆分，然后封装一个统一接口对外提供服务
--项目地址：
+- 负责基于快手电商的接口，进行二次封装后通过drf实现小程序的后端接口（用户接口，）
+- 负责项目的容器化部署
+- 项目地址：https://github.com/zcy163/blhshop
 
 #### 自动化脚本
-- 实际运行pod的pod_name,image,replicas，limits，requests,node_selector,host_network与
+- 实际运行pod的pod_name,image,replicas，limits，requests,node_selector,host_network与passage数据库中的信对比是否一致。
+- json文件与yaml文件的内容对比，同一资源下，初始的文件内容的对比。
+- docker容器健康巡检。
+- 自动化修改pod资源的replica，limits。
+- 脚本地址：https://github.com/zcy163/script
+
 
 ## 工作经历
 时间按倒序排列
